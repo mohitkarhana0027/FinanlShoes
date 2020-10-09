@@ -1,0 +1,545 @@
+
+<!doctype html>
+{% load cart_template_tags %}
+{% load static %}
+{% block content %}
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Snehi</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/font-awesome.min.css' %}">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/slick.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.css' %}">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css' %}">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/jqueryui.min.css' %}">
+    <!-- main style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+
+
+    <!-- Start Header Area -->
+    {% include "header.html" %}
+    <!-- end Header Area -->
+
+    <main>
+        <!-- slider area start -->
+        <section class="hero-slider">
+            <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+                <!-- single slider item start -->
+                <div class="hero-single-slide hero-overlay">
+                    <div class="hero-slider-item hero-1 bg-img" data-bg="{% static 'assets/img/slider/home1-slide2.jpg' %}">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="hero-slider-content slide-1">
+                                        <h1 class="slide-title">New</h1>
+                                        <h2 class="slide-subtitle">Running Sneakers <span>Men's like plex</span></h2>
+                                        <a href="#" class="btn btn-large btn-bg">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single slider item start -->
+
+
+            </div>
+        </section>
+        <!-- slider area end -->
+
+        <!-- service policy start -->
+        <section class="service-policy bg-gray mtn-100">
+            <div class="container">
+                <div class="row row-10">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="policy-block text-center">
+                            <div class="policy-icon">
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="policy-text">
+                                <h4 class="policy-title">Great Value</h4>
+                                <p class="policy-desc">Nunc id ante quis tellus faucibus dictum in eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="policy-block text-center">
+                            <div class="policy-icon">
+                                <i class="fa fa-truck"></i>
+                            </div>
+                            <div class="policy-text">
+                                <h4 class="policy-title">Worlwide Delivery</h4>
+                                <p class="policy-desc">Nunc id ante quis tellus faucibus dictum in eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="policy-block text-center">
+                            <div class="policy-icon">
+                                <i class="fa fa-credit-card"></i>
+                            </div>
+                            <div class="policy-text">
+                                <h4 class="policy-title">Safe Payment</h4>
+                                <p class="policy-desc">Nunc id ante quis tellus faucibus dictum in eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="policy-block text-center">
+                            <div class="policy-icon">
+                                <i class="fa fa-headphones"></i>
+                            </div>
+                            <div class="policy-text">
+                                <h4 class="policy-title">24/7 Help Center</h4>
+                                <p class="policy-desc">Nunc id ante quis tellus faucibus dictum in eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- service policy end -->
+
+        <!-- about us area start -->
+        <section class="about-us bg-gray section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-thumb js-tilt" data-tilt-perspective="1000" data-tilt-scale="1" data-tilt-speed="500" data-tilt-max="15">
+                            <img class="w-100" src="{% static 'assets/img/about/about.jpg' %}" alt="about thumb">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h2 class="about-title">SNEHI SNEAKER ABOUT US.</h2>
+                            <h3 class="about-subtitle">Investigationes demonstraverunt lectores legere me.</h3>
+                            <p>Quisque consequat venenatis rutrum. Quisque posuere enim augue, in rhoncus diam dictum non.Nunc id ante quis tellus faucibus</p>
+                            <ul class="about-info">
+                                <li class="add"><i class="fa fa-home"></i>Firozpur kalan,Ballabgarh,Faridabad,Haryana,India</li>
+                                <li class="phone"><i class="fa fa-phone"></i>Phone: +918130737337</li>
+                                <li class="mail"><i class="fa fa-envelope"></i>Email: mohitkarhana0028@gmail.com.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about us area end -->
+
+        <!-- product gallery area start -->
+        <section class="product-gallery section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h3 class="title">NEW ARRIVALS PRODUCTS</h3>
+                            <h4 class="sub-title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="product-carousel--4 slick-row-5 slick-arrow-style">
+
+                            {% for info in object_list %}
+
+                            <div class="product-item">
+
+                                <div class="product-thumb">
+                                    <a href="{{ info.get_absolute_url }}">
+                                        <img src="{{info.img.url}}" alt="product thumb">
+                                    </a>
+
+                                     {% if info.new %}
+                                    <div class="product-label">
+                                        <span>new</span>
+                                    </div>
+                                    {% endif %}
+                                    {% if info.isdiscount %}
+                                    <div class="discount-label">
+                                        <span>-{{ info.discount }}Off</span>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                <div class="product-content">
+                                    <div class="product-caption">
+                                        <h6 class="product-name">
+                                            <a href="{{ info.get_absolute_url }}">{{info.detail}}</a>
+
+                                        </h6>
+
+                                        <div class="price-box">
+                                            {% if info.isdiscount %}
+                                            <span class="price-old"><del>${{info.price_old}}</del></span>
+                                              {% endif %}
+                                            <span class="price-regular">${{info.price_regular}}</span>
+                                        </div>
+
+                                        <a class="add-to-cart" href="{{ info.get_absolute_url }}"><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                            {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- product gallery area end -->
+
+        <!-- banner statistics area start -->
+        <div class="banner-statistics-area">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-md-6">
+                        <div class="banner-statistics mt-30">
+                            <a href="#">
+                                <img src="{% static 'assets/img/banner/banner_1.2.jpg' %}" alt="banner thumb">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="banner-statistics mt-30">
+                            <a href="{% static '#' %}">
+                                <img src="{% static 'assets/img/banner/banner_1.3.jpg' %}" alt="banner thumb">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner statistics area end -->
+
+        <!-- product tab area start -->
+                <!-- product tab area end -->
+
+        <!-- category area start -->
+        <section class="category-area bg-set bg-img section-padding pb-0" data-bg="{% static 'assets/img/bg/bg-listcate.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h3 class="title text-white">SHOP BY CATEGORIES PULLMAN</h3>
+                            <h4 class="sub-title text-white">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row category-wrapper">
+                    <div class="col-12">
+                        <div class="catagory-carousel-active slick-row-15">
+                            <div class="single-category-item">
+                                <div class="category-title">
+                                    <a href="/shop.html/">MEN</a>
+                                </div>
+                                <div class="category-thumb">
+                                    <a href="shop.html">
+                                        <img src="{% static 'assets/img/category/category-1.png' %}" alt="category thumb">
+                                    </a>
+                                </div>
+                                <div class="shop-collection text-center">
+                                    <a class="shop-btn" href="/shop.html">Shop Collections</a>
+                                </div>
+                            </div>
+                            <div class="single-category-item">
+                                <div class="category-title">
+                                    <a href="/shop.html/">WOMEN</a>
+                                </div>
+                                <div class="category-thumb">
+                                    <a href="/shop.html/">
+                                        <img src="{% static 'assets/img/category/category-2.png' %}" alt="category thumb">
+                                    </a>
+                                </div>
+                                <div class="shop-collection text-center">
+                                    <a class="shop-btn" href="shop.html">Shop Collections</a>
+                                </div>
+                            </div>
+                            <div class="single-category-item">
+                                <div class="category-title">
+                                    <a href="/shop.html/">QUICKIIN</a>
+                                </div>
+                                <div class="category-thumb">
+                                    <a href="/shop.html/">
+                                        <img src="{% static 'assets/img/category/category-3.png' %}" alt="category thumb">
+                                    </a>
+                                </div>
+                                <div class="shop-collection text-center">
+                                    <a class="shop-btn" href="shop.html">Shop Collections</a>
+                                </div>
+                            </div>
+                            <div class="single-category-item">
+                                <div class="category-title">
+                                    <a href="/shop.html/">Kids</a>
+                                </div>
+                                <div class="category-thumb">
+                                    <a href="/shop.html/">
+                                        <img src="{% static 'assets/img/category/category-2.png' %}" alt="category thumb">
+                                    </a>
+                                </div>
+                                <div class="shop-collection text-center">
+                                    <a class="shop-btn" href="/shop.html/">Shop Collections</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- category area end -->
+
+        <!-- product gallery area start -->
+        <section class="product-gallery section-padding mt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title text-center">
+                            <h3 class="title">OUR IN STORE</h3>
+                            <h4 class="sub-title">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas est etiam processus dynamicus, qui sequitur mutationem.</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product-container">
+                            <!-- product tab menu start -->
+                            <div class="product-tab-menu">
+                                <ul class="nav justify-content-center">
+
+                                    <li><a href="{% static '#tab3' %}" data-toggle="tab">Featured Products</a></li>
+                                </ul>
+                            </div>
+                            <!-- product tab menu end -->
+
+                            <!-- product tab content start -->
+                            <div class="tab-content">
+                                <!-- single tab item start -->
+                                <div class="tab-pane fade show active" id="tab1">
+                                    <div class="product-carousel-4_2 slick-row-5 slick-arrow-style">
+                                        <!-- product single item start -->
+                                        {% for info2 in object_list %}
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a href="{{ info2.get_absolute_url }}">
+                                                    <img src="{{info2.img.url}}" alt="product thumb">
+                                                </a>
+
+                                                {% if info2.new %}
+                                                <div class="product-label">
+                                                    <span>new</span>
+                                                </div>
+                                                {% endif %}
+                                                {%if info2.isdiscount %}
+                                                <div class="discount-label">
+                                                    <span>-{{ info2.discount }} Off</span>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                            <div class="product-content">
+                                                <div class="product-caption">
+                                                    <h6 class="product-name">
+                                                        <a href="{{ info2.get_absolute_url }}">{{info2.detail}}</a>
+                                                    </h6>
+                                                    <div class="price-box">
+                                                        {% if info2.isdiscount %}
+                                                        <span class="price-old"><del>{{info2.price_old}}</del></span>
+                                                        {% endif %}
+                                                        <span class="price-regular">{{info2.price_regular}}</span>
+                                                    </div>
+                                                    <a class="add-to-cart" href="{{ info2.get_absolute_url }}"><i class="fa fa-shopping-cart"></i></a>
+                                                </div>
+                                                </div>
+
+                                            </div>
+                                        {% endfor %}
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- product gallery area end -->
+
+        <!-- testimonial area start -->
+        <section class="testimonial-area bg-img section-padding" data-bg="{% static 'assets/img/bg/bg-testimonial.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="testimonial-wrapper">
+                            <div class="testimonial-carousel">
+                                <!-- slide item start -->
+                                <div class="testimonial-slide-item">
+                                    <div class="testimonial-item text-center">
+                                        <p class="testimonial-desc">
+                                            "When potential customers are researching you online, they're getting to know you by way of the content of your website."
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="{% static 'assets/img/testimonial/testimonial-1.png' %}" alt="testimonial author">
+                                        </div>
+                                        <h6 class="author-designation">jhone doe</h6>
+                                    </div>
+                                </div>
+                                <!-- slide item end -->
+                                <!-- slide item start -->
+                                <div class="testimonial-slide-item">
+                                    <div class="testimonial-item text-center">
+                                        <p class="testimonial-desc">
+                                            " When potential customers are researching you online, they're getting to know you by way of the content of your website. "
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="{% static 'assets/img/testimonial/testimonial-1.png' %}" alt="testimonial author">
+                                        </div>
+                                        <h6 class="author-designation">jhone doe</h6>
+                                    </div>
+                                </div>
+                                <!-- slide item end -->
+                                <!-- slide item start -->
+                                <div class="testimonial-slide-item">
+                                    <div class="testimonial-item text-center">
+                                        <p class="testimonial-desc">
+                                            " When potential customers are researching you online, they're getting to know you by way of the content of your website. "
+                                        </p>
+                                        <div class="testimonial-author">
+                                            <img src="{% static 'assets/img/testimonial/testimonial-1.png' %}" alt="testimonial author">
+                                        </div>
+                                        <h6 class="author-designation">jhone doe</h6>
+                                    </div>
+                                </div>
+                                <!-- slide item end -->
+                            </div>
+                        </div>
+                        <div class="brand-logo-wrapper">
+                            <div class="brand-logo-carousel slick-row-10 slick-arrow-style">
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/1.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/2.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/3.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/4.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/5.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+
+                                <!-- single brand start -->
+                                <div class="brand-item">
+                                    <a href="#">
+                                        <img src="{% static 'assets/img/brand/6.png' %}" alt="">
+                                    </a>
+                                </div>
+                                <!-- single brand end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial area end -->
+
+    </main>
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+
+    <!-- footer area start -->
+    {% include "footer.html" %}
+    <!-- footer area end -->
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <!-- jQuery JS -->
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- Popper JS -->
+    <script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+    <!-- slick Slider JS -->
+    <script src="{% static 'assets/js/plugins/slick.min.js' %}"></script>
+    <!-- Countdown JS -->
+    <script src="{% static 'assets/js/plugins/countdown.min.js' %}"></script>
+    <!-- Nice Select JS -->
+    <script src="{% static 'assets/js/plugins/nice-select.min.js' %}"></script>
+    <!-- jquery UI JS -->
+    <script src="{% static 'assets/js/plugins/jqueryui.min.js' %}"></script>
+    <!-- Image zoom JS -->
+    <script src="{% static 'assets/js/plugins/image-zoom.min.js' %}"></script>
+    <!-- image loaded js -->
+    <script src="{% static 'assets/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- masonry  -->
+    <script src="{% static 'assets/js/plugins/masonry.pkgd.min.js' %}"></script>
+    <!-- mailchimp active js -->
+    <script src="{% static 'assets/js/plugins/ajaxchimp.js' %}"></script>
+    <!-- contact form dynamic js -->
+    <script src="{% static 'assets/js/plugins/ajax-mail.js' %}"></script>
+    <!-- google map api -->
+    <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8' %}"></script>
+    <!-- google map active js -->
+    <script src="{% static 'assets/js/plugins/google-map.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
+{% endblock content %}

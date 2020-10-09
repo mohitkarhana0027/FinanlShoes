@@ -1,0 +1,116 @@
+/*------ group list item start ------*/
+.category-group-item {
+    .title {
+        font-weight: 900;
+        margin-top: -5px;
+        padding-bottom: 30px;
+        // responsive
+        @media #{$md-device} {
+            font-size: 20px;
+        }
+        @media #{$sm-device} {
+            padding-bottom: 15px;
+            font-size: 20px;
+        }
+    }
+    .short-desc {
+        padding-bottom: 30px;
+        // responsive
+        @media #{$sm-device} {
+            padding-bottom: 20px;
+        }
+    }
+    .banner-statistics {
+        margin-bottom: 30px;
+    }
+}
+
+.group {
+    &-item {
+        display: flex;
+        .add-to-cart {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:hover {
+            .add-to-cart {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &-thumb {
+        width: 100px;
+        border: 1px solid $bdr-color;
+        align-self: start;
+        // responsive
+        @media #{$md-device} {
+            width: 85px;
+        }
+    }
+    &-desc {
+        position: relative;
+        padding-left: 20px;
+        width: calc(100% - 100px);
+        // responsive
+        @media #{$md-device} {
+            width: calc(100% - 85px);
+        }
+        .group-pro-name {
+            font-weight: 400;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            // responsive
+            @media #{$md-device, $sm-device} {
+                padding-bottom: 12px;
+            }
+            a {
+                color: $paragraph;
+                &:hover {
+                    color: $theme-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.categories-group-wrapper {
+    @media #{$md-device} {
+        margin-bottom: 78px;
+    }
+    @media #{$sm-device} {
+        margin-bottom: 60px;
+    }
+}
+.group-product-area {
+    [class*="col-"] {
+        @media #{$sm-device} {
+            &:first-child {
+                .category-group-item {
+                    margin-top: 0;
+                }
+            }
+            .category-group-item {
+                margin-top: 62px; 
+            }
+        }
+    }
+}
+
+.group-list-item-wrapper {
+    .slick-slider {
+        .slick-slide> {
+            div {
+                margin-bottom: 20px;
+    
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+/*------ group list item end ------*/
+
+

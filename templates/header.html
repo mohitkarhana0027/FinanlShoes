@@ -1,0 +1,160 @@
+{% load cart_template_tags %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Snehi</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/font-awesome.min.css' %}">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/slick.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.css' %}">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css' %}">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/jqueryui.min.css' %}">
+    <!-- main style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+    <header class="header-area">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
+            <!-- header top start -->
+            <div class="header-top black-bg">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="top-left-navigation">
+                                <ul class="nav align-items-center">
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-end">
+                            <div class="header-social-link">
+                                <a href="{% static '#' %}"><i class="fa fa-facebook"></i></a>
+                                <a href="{% static '#' %}"><i class="fa fa-twitter"></i></a>
+                                <a href="{% static '#' %}"><i class="fa fa-instagram"></i></a>
+                                <a href="{% static '#' %}"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                            <ul class="user-info-block">
+                                <li><a href="my-account.html"><i class="fa fa-user-circle"></i> My Account</a></li>
+                                <li><a href='/checkout/'><i class="fa fa-credit-card"></i> Checkout</a></li>
+                                {% if request.user.is_authenticated %}
+                                <li><a href="{% url 'account_logout' %}"><i class="fa fa-sign-in"></i> Log Out</a></li>
+                                {% endif %}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header top end -->
+
+            <!-- header middle area start -->
+            <div class="header-main-area black-soft sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+                        <!-- start logo area -->
+                        <div class="col-auto">
+                            <div class="logo">
+                                <a href="/index.html/">
+
+                                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="Brand Logo">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-auto position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+
+                                            <li><a href="/index.html/">Home</a></li>
+                                            <li><a href="/contact-us.html/">Contact us</a></li>
+
+                                            <li><a href="/shop.html/">shop <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="/shop.html/">Mens <i class="fa fa-angle-right"></i></a>
+                                                    </li>
+                                                    <li><a href="/shop.html/">Women <i class="fa fa-angle-right"></i></a>
+                                                    </li>
+                                                    <li><a href="/shop.html/">Childrens <i class="fa fa-angle-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <!-- mini cart area start -->
+
+                        {% if request.user.is_authenticated %}
+                        <div class="col-auto ml-auto">
+                            <div class="header-right">
+                                <div class="header-configure-area">
+                                    <ul class="nav">
+                                        <li class="mini-cart-wrap">
+                                            <a href="{% url 'polls:order-summary' %}" class="minicart-btn">
+                                                <i class="fa fa-shopping-cart"></i>
+                                                <span class="notification">{{ request.user|cart_item_count }}</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="{% url 'account_login' %}">
+                             <span class="clearfix d-none d-sm-inline-block"> Login </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
+                                <span class="clearfix d-none d-sm-inline-block"> Signup </span>
+                           </a>
+                         </li>
+                        {% endif %}
+                        <!-- mini cart area end -->
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect" href="/admin/">
+                             <span class="clearfix d-none d-sm-inline-block"> Admin Login </span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- header middle area end -->
+        </div>
+        <!-- main header start -->
+    </header>
+</body>
+ {% endblock content %}

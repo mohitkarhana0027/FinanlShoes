@@ -1,0 +1,118 @@
+{% load cart_template_tags %}
+{% load static %}
+{% block content %}
+<body>
+    <footer class="black-bg">
+        <!-- newsletter area start -->
+        <section class="newsletter-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="newsletter-wrapper text-center">
+                            <h3 class="title text-white">JOIN OUR NEWSLETTER</h3>
+                            <form class="newsletter-inner" id="mc-form">
+                                <input type="email" class="news-field" id="mc-email" autocomplete="off" placeholder="Enter your email address">
+                                <button class="news-btn" id="mc-submit">Subscribe</button>
+                            </form>
+                            <h6 class="newsletter-subtitle">To get the latest news from us please subscribe your email.</h6>
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                            </div>
+                            <!-- mailchimp-alerts end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- newsletter area end -->
+
+        <div class="footer-middle-area">
+            <div class="container">
+                <div class="row mtn-30">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="address-block mt-30">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="{% static 'assets/img/logo/logo.png' %}" alt="Brand Logo">
+                                </a>
+                            </div>
+                            <address class="address-info d-flex align-items-center">
+                                <i class="fa fa-map-marker"></i>
+                                <p><span>ADDRESS : </span> Faridabad,India.</p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <address class="address-info email mt-30">
+                            <i class="fa fa-envelope"></i>
+                            <p><span>EMAIL : </span><a href="mohitkarhana0028@gmail.com">mohitkarhana0028@gmail.com</a></p>
+                        </address>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <address class="address-info email mt-30">
+                            <i class="fa fa-phone"></i>
+                            <p><span>PHONE : </span><a href="tel:+918920641265">+918920641265</a></p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="payment-method-list">
+                            <img src="{% static 'assets/img/payment-2.png' %}" alt="payment method">
+                        </div>
+                        <div class="footer-link">
+                            <a href="#">SITE MAP</a>
+                            <a href="#">SEARCH TERMS</a>
+                            <a href="#">ORDERS AND RETURNS</a>
+                            <a href="contact-us.html">CONTACT US</a>
+                        </div>
+                        <p class="copyright">
+                            Copyright <a href="{% static '#' %}">Snehi</a>. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Modernizer JS -->
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <!-- jQuery JS -->
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- Popper JS -->
+    <script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+    <!-- slick Slider JS -->
+    <script src="{% static 'assets/js/plugins/slick.min.js' %}"></script>
+    <!-- Countdown JS -->
+    <script src="{% static 'assets/js/plugins/countdown.min.js' %}"></script>
+    <!-- Nice Select JS -->
+    <script src="{% static 'assets/js/plugins/nice-select.min.js' %}"></script>
+    <!-- jquery UI JS -->
+    <script src="{% static 'assets/js/plugins/jqueryui.min.js' %}"></script>
+    <!-- Image zoom JS -->
+    <script src="{% static 'assets/js/plugins/image-zoom.min.js' %}"></script>
+    <!-- image loaded js -->
+    <script src="{% static 'assets/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- masonry  -->
+    <script src="{% static 'assets/js/plugins/masonry.pkgd.min.js' %}"></script>
+    <!-- mailchimp active js -->
+    <script src="{% static 'assets/js/plugins/ajaxchimp.js' %}"></script>
+    <!-- contact form dynamic js -->
+    <script src="{% static 'assets/js/plugins/ajax-mail.js' %}"></script>
+    <!-- google map api -->
+    <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8' %}"></script>
+    <!-- google map active js -->
+    <script src="{% static 'assets/js/plugins/google-map.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+ {% endblock content %}

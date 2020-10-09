@@ -1,0 +1,155 @@
+
+{% load i18n %}
+{% load account socialaccount %}
+{% load crispy_forms_tags %}
+
+{% block head_title %}{% endblock %}
+{% block content %}
+{% load static %}
+
+
+<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Pullman - eCommerce Bootstrap 4 Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/bootstrap.min.css' %}">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/vendor/font-awesome.min.css' %}">
+    <!-- Slick slider css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/slick.min.css' %}">
+    <!-- animate css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/animate.css' %}">
+    <!-- Nice Select css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/nice-select.css' %}">
+    <!-- jquery UI css -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins/jqueryui.min.css' %}">
+    <!-- main style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Start Header Area -->
+    {% include "header.html" %}
+    <!-- end Header Area -->
+
+    <main>
+        <!-- breadcrumb area start -->
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{% static 'assets/img/banner/shop.jpg' %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb-wrap">
+                            <nav aria-label="breadcrumb">
+                                <h3 class="breadcrumb-title">LOGIN REGISTER</h3>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Login Register</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+
+        <!-- login register wrapper start -->
+
+        <div class="login-register-wrapper section-padding">
+            <div class="container">
+                <div class="member-area-from-wrap">
+
+                    <div class="row">
+                        <!-- Register Content Start -->
+
+                        <div class="col-lg-6">
+                            <div class="login-reg-form-wrap sign-up-form">
+
+                                <h4>{% trans "Sign Up" %}</h4>
+                                <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+                                <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                                    {% csrf_token %}
+                                    {{ form|crispy }}
+                                    {% if redirect_field_value %}
+                                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                                     {% endif %}
+                                     <button class='btn btn-primary' type="submit">{% trans "Sign Up" %} &raquo;</button>
+
+                                </form>
+                            </div>
+                        </div>
+                             <!-- Register Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- login register wrapper end -->
+    </main>
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+
+    <!-- footer area start -->
+    {% include "footer.html" %}
+    <!-- footer area end -->
+
+
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+    <!-- jQuery JS -->
+    <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js' %}"></script>
+    <!-- Popper JS -->
+    <script src="{% static 'assets/js/vendor/popper.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+    <!-- slick Slider JS -->
+    <script src="{% static 'assets/js/plugins/slick.min.js' %}"></script>
+    <!-- Countdown JS -->
+    <script src="{% static 'assets/js/plugins/countdown.min.js' %}"></script>
+    <!-- Nice Select JS -->
+    <script src="{% static 'assets/js/plugins/nice-select.min.js' %}"></script>
+    <!-- jquery UI JS -->
+    <script src="{% static 'assets/js/plugins/jqueryui.min.js' %}"></script>
+    <!-- Image zoom JS -->
+    <script src="{% static 'assets/js/plugins/image-zoom.min.js' %}"></script>
+    <!-- image loaded js -->
+    <script src="{% static 'assets/js/plugins/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- masonry  -->
+    <script src="{% static 'assets/js/plugins/masonry.pkgd.min.js' %}"></script>
+    <!-- mailchimp active js -->
+    <script src="{% static 'assets/js/plugins/ajaxchimp.js' %}"></script>
+    <!-- contact form dynamic js -->
+    <script src="{% static 'assets/js/plugins/ajax-mail.js' %}"></script>
+    <!-- google map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
+    <!-- google map active js -->
+    <script src="{% static 'assets/js/plugins/google-map.js' %}"></script>
+    <!-- Main JS -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
+{% endblock %}

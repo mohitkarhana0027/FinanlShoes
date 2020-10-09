@@ -1,0 +1,200 @@
+/*------ newsletter area start ------*/
+.newsletter-area {
+    padding-top: 48px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #2f2f2f;
+}
+.newsletter-wrapper {
+    .title {
+        font-weight: 800;
+        line-height: 1;
+        padding-bottom: 24px;
+        // responsive
+        @media #{$xs-device} {
+            font-size: 20px;
+        }
+    }
+    .newsletter-inner {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        // responsive
+        @media #{$sm-device} {
+            max-width: 450px;
+        }
+        @media #{$xxs-device} {
+            display: block;
+        }
+        .news-field {
+            height: 50px;
+            color: #959595;
+            width: 100%;
+            padding: 0 20px;
+            background-color: #262626;
+            border-radius: 50px;
+            border: 2px solid #3c3c3c;
+            margin-right: 20px;
+            // responsive
+            @media #{$xxs-device} {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .newsletter-subtitle {
+        color: #999999;
+        padding-top: 20px;
+    }
+}
+.news-btn {
+    color: $white;
+    font-size: 20px;
+    height: 50px;
+    font-weight: 700;
+    padding: 0 35px;
+    border-radius: 50px;
+    background-color: $theme-color;
+    &:hover {
+        background-color: #333333;
+    }
+}
+/*------ newsletter area end ------*/
+
+/*----- footer area start -----*/
+.footer-widget-area {
+    padding-top: 78px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #2f2f2f;
+    // responsive
+    @media #{$sm-device} {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+.widget-title {
+    color: $white;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+.usefull-links {
+    li {
+        a {
+            color: #999999;
+            font-size: 16px;
+            padding: 5px 0;
+            display: block;
+        }
+        &:hover {
+            a {
+                padding-left: 10px;
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+// footer middle area
+.footer-middle-area {
+    padding: 35px 0;
+    border-bottom: 1px solid #2f2f2f;
+    .address-block {
+        display: flex;
+        align-items: center;
+        // responsive
+        @media #{$xxs-device} {
+            display: block;
+        }
+    }
+    .footer-logo {
+        padding-right: 20px;
+        border-right: 2px solid $white;
+        // responsive
+        @media #{$xxs-device} {
+            margin-bottom: 30px;
+            border-right: none;
+            padding-right: 0;
+        }
+    }
+    .address-info {
+        width: 60%;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        // responsive
+        @media #{$xxs-device} {
+            width: 100%;
+            padding-left: 0;
+        }
+        i {
+            color: $theme-color;
+            font-size: 24px;
+            line-height: 1;
+            padding-right: 15px;
+        }
+        p {
+            color: #999;
+            line-height: 1.4;
+            span {
+                font-weight: 900;
+            }
+            a {
+                color: #999;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        &.email {
+            width: 100%;
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+// footer bottom area
+.footer-bottom-area {
+    padding: 48px 0;
+}
+.footer-link {
+    padding: 27px 0 8px;
+    a {
+        color: #888888;
+        line-height: 1;
+        font-size: 14px;
+        padding-right: 14px;
+        margin-right: 10px;
+        position: relative;
+        &:before {
+            top: 50%;
+            right: 0;
+            width: 1px;
+            height: 12px;
+            content: '';
+            background-color: #888888;
+            position: absolute;
+            transform: translateY(-50%);
+            // responsive
+            @media #{$sm-device} {
+                display: none;
+            }
+        }
+        &:last-child {
+            &:before {
+                display: none;
+            }
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+// copyright text
+.copyright {
+    color: #999999;
+    a {
+        color: $theme-color;
+    }
+}
+/*----- footer area end -----*/

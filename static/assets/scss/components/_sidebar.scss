@@ -1,0 +1,76 @@
+/*----- shop Sidebar start -----*/
+.sidebar-wrapper {
+    .sidebar-single {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // responsive
+    @media #{$md-device} {
+        margin-top: 80px;
+    }
+    @media #{$sm-device} {
+        margin-top: 62px;
+    }
+}
+
+.sidebar-single {
+    margin-bottom: 35px;
+    .sidebar-title {
+        position: relative;
+        line-height: 1;
+        font-weight: 900;
+        margin-top: -3px;
+        padding-bottom: 26px;
+        text-transform: uppercase;
+    }
+}
+
+// categories list start
+.search-list {
+    li {
+        color: $paragraph;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            color: $theme-color;
+        }
+    }
+}
+
+/*------ shop categories area start ------*/
+.shop-categories {
+    margin-top: -4px;
+    li {
+        a {
+            color: $paragraph;
+            display: block;
+            line-height: 1;
+            padding: 10px 0;
+            text-transform: capitalize;
+        }
+        &:first-child {
+            a {
+                padding-top: 0;
+            }
+        }
+        &:last-child {
+            a {
+                padding-bottom: 0;
+            }
+        }
+        &:hover {
+            a {
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+/*------ shop categories area end ------*/
+
+/*----- shop Sidebar end -----*/
+

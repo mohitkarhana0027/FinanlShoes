@@ -1,0 +1,73 @@
+/*------ section title start ------*/
+.section-title {
+    max-width: 65%;
+    margin: -5px auto 37px;
+    // responsive
+    @media #{$sm-device} {
+        max-width: 90%;
+    }
+    .title {
+        font-weight: 900;
+        // responsive
+        @media #{$xs-device} {
+            font-size: 22px;
+            font-weight: 800;
+        }
+    }
+
+    .sub-title {
+        font-weight: 400;
+        padding-top: 14px;
+        line-height: 1.6;
+        color: $paragraph-light;
+        // responsive
+        @media #{$sm-device} {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.section-title-append {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -4px;
+    margin-bottom: 18px;
+    line-height: 1;
+
+    &:after {
+        top: 50%;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        content: "";
+        position: absolute;
+        background-color: $bdr-color;
+        transform: translateY(-50%);
+        z-index: 1;
+        margin-top: -3px;
+
+        // responsive
+        @media #{$md-device} {
+            margin-top: 2px;
+        }
+    }
+
+    h4 {
+        display: inline-block;
+        line-height: 1;
+        text-transform: capitalize;
+        background-color: $white;
+        position: relative;
+        z-index: 2;
+        padding-right: 5px;
+
+        // responsive
+        @media #{$lg-device} {
+            font-size: 16px;
+        }
+    }
+}
+
+/*------ section title end ------*/

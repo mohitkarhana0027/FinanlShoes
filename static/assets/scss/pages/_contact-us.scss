@@ -1,0 +1,95 @@
+/*----- Google map area start -----*/
+#google-map {
+    height: 500px;
+    width: 100%;
+    // responsive
+    @media #{$md-device} {
+        height: 400px;
+    }
+    @media #{$sm-device} {
+        height: 350px;
+    }
+}
+/*----- Google map area end -----*/
+
+/*------ contact form area start -------*/
+.contact-area {
+    margin-top: -4px;
+    // responsive
+    @media #{$md-device, $sm-device} {
+        margin-bottom: -3px;
+    }
+}
+.contact-message {
+    form {
+        input, textarea {
+            width: 100%;
+            border: none;
+            padding: 10px 10px;
+            border-bottom: 3px solid transparent;
+            background-color: #f7f7f7;
+            margin-bottom: 30px;
+        }
+        textarea  {
+            height: 150px;
+        }
+    }
+}
+/*------ contact form area start -------*/
+
+/*------ contact info area start -------*/
+.contact-info {
+    height: 100%;
+    // responsive
+    @media #{$md-device} {
+        margin-top: 77px;
+    }
+    @media #{$sm-device} {
+        margin-top: 60px;
+    }
+    p {
+        padding-bottom: 20px;
+        // responsive
+        @media #{$md-device} {
+            padding-bottom: 10px;
+        }
+    }
+    ul {
+        li {
+            border-bottom: 1px solid $bdr-color;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            // responsive
+            @media #{$xxs-device} {
+                align-items: baseline;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            i {
+                font-size: 18px;
+                padding-right: 10px;
+            }
+        }
+    }
+    .working-time {
+        h6 {
+            padding-bottom: 10px;
+        }
+        p {
+            line-height: 1;
+            padding-bottom: 0;
+            span {
+                color: $black-soft;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+.contact-title {
+    line-height: 1;
+    padding-bottom: 22px;
+}
+/*------ contact info area end -------*/

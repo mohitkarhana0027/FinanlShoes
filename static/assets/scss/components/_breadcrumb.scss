@@ -1,0 +1,53 @@
+/*----- breadcrumb style css start -----*/
+.breadcrumb-area {
+    &.breadcrumb-img {
+        padding: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // responsive
+        @media #{$sm-device} {
+            padding: 40px 0;
+        }
+    }
+}
+.breadcrumb-wrap {
+    text-align: center;
+    .breadcrumb-title {
+        color: $white;
+        padding-bottom: 10px;
+        // responsive
+        @media #{$xs-device} {
+            font-size: 20px;
+        }
+    }
+    .breadcrumb {
+        background: transparent;
+        margin-bottom: 0;
+        padding: 0;
+        .breadcrumb-item {
+            a {
+                color: $white;
+                line-height: 1;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+            &:before {
+                color: $white;
+                content: "/";
+                font-size: 12px;
+                margin: 0 5px;
+            }
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+            &.active {
+                color: $white;
+            }
+        }
+    }
+}
+/*----- breadcrumb style css end -----*/
